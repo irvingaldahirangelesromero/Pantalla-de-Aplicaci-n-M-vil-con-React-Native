@@ -55,6 +55,17 @@ export default function WhatsAppScreen() {
                     <Text style={styles.optName}>Llamadas</Text>
                 </TouchableOpacity>
             </View>
+
+            {/* Floating Buttons */}
+            <View style={styles.floatingButtons}>
+                <TouchableOpacity style={styles.metaAIButton}>
+                    {/* <Ionicons name="logo-react" size={28} color="white" /> */}
+                    <Text style={styles.optIA}> O </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.newChatButton}>
+                    <Ionicons name="chatbubble-outline" size={28} color="#0b1014" />
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -130,7 +141,6 @@ const styles = StyleSheet.create({
         bottom: 0,
         width: '100%',
     },
-
     optName: {
         color: '#fff',
         fontWeight: 'bold',
@@ -139,7 +149,38 @@ const styles = StyleSheet.create({
         fontSize: 16,
         marginTop:5
     },
-        footerItem: {
+    footerItem: {
         alignItems: 'center',
     },
+    floatingButtons: {
+        position: 'absolute',
+        right: 20,
+        bottom: 80,
+        alignItems: 'center',
+    },
+    metaAIButton: {
+        backgroundColor: '#23282c',
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+    newChatButton: {
+        backgroundColor: '#25D366',
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 30,
+    },
+    optIA: {
+        color: '#80DAEB',
+        fontWeight: 'bold',
+        alignItems: 'center',
+        textAlign: 'center',
+        fontSize: 36,
+    }
 });
